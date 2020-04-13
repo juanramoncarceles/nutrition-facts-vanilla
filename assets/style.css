@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Muli', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* Mozilla offscreen CSS */
+.offscreen {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#appTitle {
+  position: absolute;
+  top: 0;
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+#foodTitle {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 2rem;
+  height: 5rem;
+}
+
+#valoresNutricionales {
+  width: 350px;
+  margin: auto;
+  display: block;
+}
+
+#caloriesBar,
+#carbsBar,
+#proteinsBar,
+#fatsBar,
+#fiberBar {
+  transition-property: stroke-dasharray;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(.12,.25,.22,1.55);
+}
+
+#barsTexts > text {
+  text-anchor: middle;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+
+#toggleFoodList {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: unset;
+  border-style: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#toggleFoodList > svg {
+  fill: #fff;
+}
+
+#foodList {
+  position: absolute;
+}
+
+#foodList.disabled {
+  top: 300px;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 215px;
+}
+
+#foodList.disabled > form {
+  display: none;
+}
+
+#foodList.disabled > #foodListItems {
+  display: flex;
+  align-items: center;
+}
+
+#foodList.disabled > #foodListItems > img {
+  position: absolute;
+}
+
+#foodList.active {
+  top: 0;
+  min-height: 100vh;
+  left: 0;
+  right: 0;
+  background-color: #89d88deb;
+  padding: 2rem;
+}
+
+#foodList.active > form {
+  display: unset;
+}
+
+#foodList.active > #foodListItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#foodList.active > #foodListItems > img {
+  width: 200px;
+  height: 160px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+#foodList.active > #foodListItems > img:hover {
+  transform: scale(1.1);
+}
+
+#foodListItems > img {
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+#foodListInput {
+  margin: auto;
+  display: block;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  padding: 0.6rem;
+  background-color: #adefb0eb;
+  width: 70%;
+  max-width: 400px;
+  font-family: inherit;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom: 4px solid #f4ff00;
+}
+
+#bottomCredits {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.8rem;
+}
+
+#bottomCredits > a {
+  color: #999;
+}
