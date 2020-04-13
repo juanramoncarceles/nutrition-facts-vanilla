@@ -99,6 +99,10 @@ body {
   position: absolute;
 }
 
+#foodList.disabled > #foodListItems > img:not(.selected) {
+  opacity: 0;
+}
+
 #foodList.active {
   top: 0;
   min-height: 100vh;
@@ -124,15 +128,23 @@ body {
   height: 160px;
   margin: 20px;
   cursor: pointer;
+  opacity: 1;
+  filter: drop-shadow(0px 4px 4px #3e3e3e);
 }
 
-#foodList.active > #foodListItems > img:hover {
+#foodList.active > #foodListItems > img.selected {
+  opacity: 0.5;
+  cursor: unset;
+}
+
+#foodList.active > #foodListItems > img:not(.selected):hover {
   transform: scale(1.1);
 }
 
 #foodListItems > img {
-  transition-property: opacity;
-  transition-duration: 1s;
+  transition: opacity 1s, transform 0.5s;
+  /* transition-property: opacity;
+  transition-duration: 1s; */
 }
 
 #foodListInput {

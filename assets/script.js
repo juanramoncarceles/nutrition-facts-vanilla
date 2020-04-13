@@ -12,49 +12,43 @@ const fatsValue = document.getElementById('fatsValue');
 const fiberBar = document.getElementById('fiberBar');
 const fiberValue = document.getElementById('fiberValue');
 
-// FOOD LIST
+// FOOD LIST ELEMENTS
 
 const toggleFoodList = document.getElementById('toggleFoodList');
 const foodList = document.getElementById('foodList');
 const foodListItems = document.getElementById('foodListItems');
 
 
-// Save the id of the current and previous food item
+// Global variables to store a reference to the current and previous food item.
 let currentItem = undefined;
 let previousItem = undefined;
 
 for (let i = 0; i < foodListItems.children.length; i++) {
   foodListItems.children[i].addEventListener('click', (e) => {
     if (foodList.dataset.active === "true") {
-      // only will happen the first time
+      // This only will happen the first time.
       if (previousItem === undefined) {
-        currentItem = e.currentTarget.id;
+        currentItem = e.currentTarget;
+        currentItem.classList.add('selected');
         for (let i = 0; i < foodListItems.children.length; i++) {
-          // all items that have not been chosed set transition to 0
-          if (foodListItems.children[i].id !== currentItem) {
+          // All items that have not been chosed set transition to 0.
+          if (foodListItems.children[i].id !== currentItem.id)
             foodListItems.children[i].style.transitionDuration = "0s";
-            foodListItems.children[i].style.opacity = 0;
-          } else {
-            foodListItems.children[i].style.opacity = 1;
-          }
         }
       } else {
-        currentItem = e.currentTarget.id;
+        currentItem = e.currentTarget;
+        currentItem.classList.add('selected');
+        previousItem.classList.remove('selected');
         for (let i = 0; i < foodListItems.children.length; i++) {
-          // all items that have not been chosed and that are not the prev set transition to 0
-          if (foodListItems.children[i].id !== currentItem && foodListItems.children[i].id !== previousItem) {
+          // All items that have not been chosed and that are not the previous set transition to 0.
+          if (foodListItems.children[i].id !== currentItem.id && foodListItems.children[i].id !== previousItem.id) {
             foodListItems.children[i].style.transitionDuration = "0s";
           } else {
             foodListItems.children[i].style.transitionDuration = "1s";
           }
-          if (foodListItems.children[i].id !== currentItem) {
-            foodListItems.children[i].style.opacity = 0;
-          } else {
-            foodListItems.children[i].style.opacity = 1;
-          }
         }
       }
-      updateValues(currentItem);
+      updateValues(currentItem.id);
       closeFoodList();
     }
   });
@@ -77,15 +71,11 @@ toggleFoodList.addEventListener('click', () => {
     foodList.classList.add('active');
     toggleFoodList.getElementsByClassName('mgIcon')[0].style.display = "none";
     toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = "unset";
-    for (let i = 0; i < foodListItems.children.length; i++) {
-      foodListItems.children[i].style.opacity = 1;
-    }
   } else {
     closeFoodList();
     for (let i = 0; i < foodListItems.children.length; i++) {
-      if (currentItem !== foodListItems.children[i].id) {
+      if (currentItem.id !== foodListItems.children[i].id) {
         foodListItems.children[i].style.transitionDuration = "0s";
-        foodListItems.children[i].style.opacity = 0;
       }
     }
   }
