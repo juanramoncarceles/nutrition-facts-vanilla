@@ -141,10 +141,9 @@ body {
   transform: scale(1.1);
 }
 
-#foodListItems > img {
+#foodList.active > #foodListItems > img,
+#foodList.disabled > #foodListItems > img.selected {
   transition: opacity 1s, transform 0.5s;
-  /* transition-property: opacity;
-  transition-duration: 1s; */
 }
 
 #foodListInput {

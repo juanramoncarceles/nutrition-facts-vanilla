@@ -1,7 +1,3 @@
-If an item is active, then when the list is open it should be selected/opacity in some way and avoid the scale on hover.
+CNAME place under www.nutritionfactsapp.ramoncarceles.com
 
-Use name from data-name instead of id value.
-
-transition on items is lost.
-
-Avoid clicking the already selected element in the list.
+Reorganize automatic illustrator classes on UI svg
