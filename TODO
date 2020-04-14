@@ -1,5 +1,11 @@
-CNAME place under www.nutritionfactsapp.ramoncarceles.com
-
 Reorganize automatic illustrator classes on UI svg
 
-Make responsive for phones
+Make responsive for small screens like phones. Is to high so it should adapt to window height.
+Take into account when orientation is landscape on a phone.
+On the new structure:
+  - The food title and the main svg should be inside a container and it centered vertically.
+  - The problem is that the choosed item wouldnt match vertically, so it would be better to think of another option (svg symbols? img scr with the same?, move the element?)
+  - The footer without the added margin top, because it would be pushed to the bottom as the last flex item of the column.
+
+
+Make that clicking on the food title also opens the food list.
