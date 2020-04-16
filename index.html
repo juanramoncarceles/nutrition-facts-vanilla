@@ -15,68 +15,14 @@
   <h2 id="foodTitle"></h2>
 
   <svg id="valoresNutricionales" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 349.25">
-    <defs>
-      <style>
-        .cls-1,
-        .cls-2 {
-          fill: none;
-        }
-
-        .cls-1,
-        .cls-2 {
-          stroke: #ff95d1;
-          stroke-width: 16px;
-        }
-
-        .cls-1,
-        .cls-11,
-        .cls-12,
-        .cls-13,
-        .cls-14 {
-          opacity: 0.2;
-        }
-
-        .cls-3 {
-          font-size: 12px;
-        }
-
-        .cls-6,
-        .cls-15 {
-          font-size: 11px;
-        }
-
-        .cls-3,
-        .cls-15 {
-          fill: #fff;
-        }
-
-        .cls-3,
-        .cls-6,
-        .cls-15 {
-          font-family: inherit;
-        }
-
-        .cls-11 {
-          fill: #d7ff61;
-        }
-
-        .cls-12 {
-          fill: #fffe8f;
-        }
-
-        .cls-13 {
-          fill: #ffae67;
-        }
-
-        .cls-14 {
-          fill: #bdf2ff;
-        }
-      </style>
-    </defs>
-    <path class="cls-1" d="M100,207a92,92,0,1,1,92-92A92.1,92.1,0,0,1,100,207Z" />
-    <path id="caloriesBar" class="cls-2" d="M100,23A92,92,0,1,1,8,115a92.1,92.1,0,0,1,92-92" style="stroke-dasharray: 0 578" />
-    <text class="cls-3" transform="translate(80.94 10.04)">calories</text>
-    <text id="caloriesValue" class="cls-6" transform="translate(100 210)" style="text-anchor: middle;">0 Kcal.</text>
+    <g style="fill:none;stroke-width:16px;stroke:#ff95d1;">
+      <path style="opacity:0.2;" d="M100,207a92,92,0,1,1,92-92A92.1,92.1,0,0,1,100,207Z" />
+      <path id="caloriesBar" d="M100,23A92,92,0,1,1,8,115a92.1,92.1,0,0,1,92-92" style="stroke-dasharray: 0 578" />
+    </g>
+    <g style="font-size:11px;font-family:inherit;">
+      <text style="fill:#fff;" transform="translate(80.94 10.04)">calories</text>
+      <text id="caloriesValue" transform="translate(100 210)" style="text-anchor: middle;">0 Kcal.</text>
+    </g>
     <g>
       <clipPath id="barsClip">
         <rect x="82.5" y="234" width="35" height="100" rx="3" ry="3" />
@@ -85,19 +31,21 @@
       <line id="proteinsBar" x1="100" y1="234" x2="100" y2="334" style="clip-path: url(#barsClip); transform: translateX(-25px); stroke:#ffae67; stroke-width: 35px; stroke-dasharray: 0 100;" />
       <line id="fatsBar" x1="100" y1="234" x2="100" y2="334" style="clip-path: url(#barsClip); transform: translateX(25px); stroke:#fffe8f; stroke-width: 35px; stroke-dasharray: 0 100;" />
       <line id="fiberBar" x1="100" y1="234" x2="100" y2="334" style="clip-path: url(#barsClip); transform: translateX(75px); stroke:#d7ff61; stroke-width: 35px; stroke-dasharray: 0 100;" />
-      <rect class="cls-11" x="157.5" y="234" width="35" height="100" rx="3" ry="3" />
-      <rect class="cls-12" x="107.5" y="234" width="35" height="100" rx="3" ry="3" />
-      <rect class="cls-13" x="57.5" y="234" width="35" height="100" rx="3" ry="3" />
-      <rect class="cls-14" x="7.5" y="234" width="35" height="100" rx="3" ry="3" />
-      <g id="barsTexts">
-        <text id="fiberValue" class="cls-15" transform="translate(175 346)">0g</text>
-        <text id="fatsValue" class="cls-15" transform="translate(125 346)">0g</text>
-        <text id="proteinsValue" class="cls-15" transform="translate(75 346)">0g</text>
-        <text id="carbsValue" class="cls-15" transform="translate(25 346)">0g</text>
-        <text class="cls-15" transform="translate(175 229)">fiber</text>
-        <text class="cls-15" transform="translate(125 229)">fats</text>
-        <text class="cls-15" transform="translate(75 229)">proteins</text>
-        <text class="cls-15" transform="translate(25 229)">carbs</text>
+      <g style="opacity:0.2;">
+        <rect style="fill:#d7ff61;" x="157.5" y="234" width="35" height="100" rx="3" ry="3" />
+        <rect style="fill:#fffe8f;" x="107.5" y="234" width="35" height="100" rx="3" ry="3" />
+        <rect style="fill:#ffae67;" x="57.5" y="234" width="35" height="100" rx="3" ry="3" />
+        <rect style="fill:#bdf2ff;" x="7.5" y="234" width="35" height="100" rx="3" ry="3" />
+      </g>
+      <g id="barsTexts" style="font-size:11px;font-family:inherit;fill:#fff;">
+        <text id="fiberValue" transform="translate(175 346)">0g</text>
+        <text id="fatsValue" transform="translate(125 346)">0g</text>
+        <text id="proteinsValue" transform="translate(75 346)">0g</text>
+        <text id="carbsValue" transform="translate(25 346)">0g</text>
+        <text transform="translate(175 229)">fiber</text>
+        <text transform="translate(125 229)">fats</text>
+        <text transform="translate(75 229)">proteins</text>
+        <text transform="translate(25 229)">carbs</text>
       </g>
     </g>
   </svg>
