@@ -1,0 +1,23 @@
+{
+  "name": "nutrition-facts",
+  "version": "1.0.0",
+  "description": "Small web app that allow to check nutritional values of food items.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanramoncarceles/nutritional-facts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanramoncarceles/nutritional-facts/issues"
+  },
+  "homepage": "https://github.com/juanramoncarceles/nutritional-facts#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}

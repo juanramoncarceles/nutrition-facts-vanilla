@@ -8,59 +8,6 @@ let previousItem = undefined;
 
 
 ///////////////////////////////////////////////////////////////////////////////
-///////////////////////////// THE FOOD LIST ///////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-
-// DOM elements reference.
-const toggleFoodList = document.getElementById('toggleFoodList');
-const foodList = document.getElementById('foodList');
-const foodListItems = document.getElementById('foodListItems');
-
-// Food item click handler setup.
-for (let i = 0; i < foodListItems.children.length; i++) {
-  foodListItems.children[i].addEventListener('click', (e) => {
-    if (foodList.dataset.active === "true" && !e.currentTarget.classList.contains('selected')) {
-      if (previousItem === undefined) { // This only will happen the first time an item is selected.
-        currentItem = e.currentTarget;
-        currentItem.classList.add('selected');
-      } else {
-        currentItem = e.currentTarget;
-        currentItem.classList.add('selected');
-        previousItem.classList.remove('selected');
-      }
-      updateValues(currentItem);
-      closeFoodList();
-    }
-  });
-}
-
-/**
- * Closes the food list.
- */
-function closeFoodList() {
-  foodList.dataset.active = "false";
-  foodList.classList.add('disabled');
-  foodList.classList.remove('active');
-  toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = "none";
-  toggleFoodList.getElementsByClassName('mgIcon')[0].style.display = "unset";
-}
-
-// Food list toggle click handler setup.
-toggleFoodList.addEventListener('click', () => {
-  if (foodList.dataset.active === "false") {
-    if (currentItem) previousItem = currentItem;
-    foodList.dataset.active = "true";
-    foodList.classList.remove('disabled');
-    foodList.classList.add('active');
-    toggleFoodList.getElementsByClassName('mgIcon')[0].style.display = "none";
-    toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = "unset";
-  } else {
-    closeFoodList();
-  }
-});
-
-
-///////////////////////////////////////////////////////////////////////////////
 ////////////////////////////// UI STRUCTURE ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -87,10 +34,10 @@ function updateValues(foodItem) {
   // Set food title
   foodTitle.innerText = foodItem.dataset.name;
   // Object with the food item values
-  const foodValues = nutritionFacts[foodItem.id];
+  const foodValues = nutritionFacts[foodItem.id]; // eslint-disable-line no-use-before-define
   // Update calories
   caloriesBar.style.strokeDasharray = `${578 * (foodValues.calories / caloriesMax)}px 578px`;
-  caloriesValue.style.fill = (foodValues.calories > caloriesMax / 2) ? "#000" : "#fff";
+  caloriesValue.style.fill = (foodValues.calories > caloriesMax / 2) ? '#000' : '#fff';
   caloriesValue.innerHTML = `${foodValues.calories} Kcal.`;
 
   const updateTextDelay = 500;
@@ -123,26 +70,84 @@ function updateValues(foodItem) {
 
 
 ///////////////////////////////////////////////////////////////////////////////
+///////////////////////////// THE FOOD LIST ///////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+// DOM elements reference.
+const toggleFoodList = document.getElementById('toggleFoodList');
+const foodList = document.getElementById('foodList');
+const foodListItems = document.getElementById('foodListItems');
+
+/**
+ * Closes the food list.
+ */
+function closeFoodList() {
+  foodList.dataset.active = 'false';
+  foodList.classList.add('disabled');
+  foodList.classList.remove('active');
+  toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = 'none';
+  toggleFoodList.getElementsByClassName('mgIcon')[0].style.display = 'unset';
+}
+
+// Food item click handler setup.
+for (let i = 0; i < foodListItems.children.length; i++) {
+  foodListItems.children[i].addEventListener('click', (e) => {
+    if (foodList.dataset.active === 'true' && !e.currentTarget.classList.contains('selected')) {
+      if (previousItem === undefined) { // This only will happen the first time an item is selected.
+        currentItem = e.currentTarget;
+        currentItem.classList.add('selected');
+      } else {
+        currentItem = e.currentTarget;
+        currentItem.classList.add('selected');
+        previousItem.classList.remove('selected');
+      }
+      updateValues(currentItem);
+      closeFoodList();
+    }
+  });
+}
+
+// Food list toggle click handler setup.
+toggleFoodList.addEventListener('click', () => {
+  if (foodList.dataset.active === 'false') {
+    if (currentItem) previousItem = currentItem;
+    foodList.dataset.active = 'true';
+    foodList.classList.remove('disabled');
+    foodList.classList.add('active');
+    toggleFoodList.getElementsByClassName('mgIcon')[0].style.display = 'none';
+    toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = 'unset';
+  } else {
+    closeFoodList();
+  }
+});
+
+
+///////////////////////////////////////////////////////////////////////////////
 ////////////////////////// FILTER FOOD FORM ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
 // DOM elements reference.
 const foodListInput = document.getElementById('foodListInput');
 
-foodListInput.addEventListener('input', (e) => {
-  filterFood(e.target.value);
-});
-
+/**
+ * Hiddes all the foodListItems children that doesn't include the keyword on
+ * the data-name.
+ * @param {string} keyword 
+ */
 function filterFood(keyword) {
   const string = keyword.toLowerCase();
   for (let i = 0; i < foodListItems.children.length; i++) {
     if (!foodListItems.children[i].dataset.name.toLowerCase().includes(string)) {
-      foodListItems.children[i].style.display = "none";
+      foodListItems.children[i].style.display = 'none';
     } else {
-      foodListItems.children[i].style.display = "unset";
+      foodListItems.children[i].style.display = 'unset';
     }
   }
 }
+
+foodListInput.addEventListener('input', (e) => {
+  filterFood(e.target.value);
+});
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -186,7 +191,7 @@ const nutritionFacts = {
     fat: 49,
     fiber: 8
   }
-}
+};
 
 // TODO
 //   almond
