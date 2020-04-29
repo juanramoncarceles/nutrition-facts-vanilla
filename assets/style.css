@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-html {
+:root {
   font-family: 'Muli', sans-serif;
 }
 
@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0 0.8rem;
   min-height: 100vh;
-  color: white;
+  color: #fff;
   background-color: #1f1f1f;
 }
 
@@ -48,9 +48,23 @@ body {
   font-size: 2rem;
 }
 
-#valoresNutricionales {
+#nutritionFactsUI {
   max-width: 350px;
   max-height: 75vh;
+}
+
+#selectedFoodImage {
+  transform: scale(0.7);
+  transform-origin: center;
+  transform-box: fill-box;  
+}
+
+#selectedFoodImage.transition {
+  transition: transform 0.5s cubic-bezier(0,1.42,1,1.69);
+}
+
+#selectedFoodImage.active {
+  transform: scale(1);
 }
 
 #caloriesBar,
@@ -183,7 +197,7 @@ body {
   color: #999;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 400px), (max-height: 400px) {
   :root {
     font-size: 0.8rem;
   }

@@ -2,10 +2,8 @@
 /////////////////////////// GLOBAL PROPERTIES /////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-// Store a reference to the current and previous food item.
+// Store a reference to the current food item.
 let currentItem = undefined;
-let previousItem = undefined;
-
 
 ///////////////////////////////////////////////////////////////////////////////
 ////////////////////////////// UI STRUCTURE ///////////////////////////////////
@@ -13,6 +11,7 @@ let previousItem = undefined;
 
 // DOM elements reference.
 const foodTitle = document.getElementById('foodTitle');
+const foodImage = document.getElementById('selectedFoodImage');
 const caloriesBar = document.getElementById('caloriesBar');
 const caloriesValue = document.getElementById('caloriesValue');
 const carbsBar = document.getElementById('carbsBar');
@@ -85,40 +84,51 @@ function closeFoodList() {
   foodList.dataset.active = 'false';
   foodList.classList.add('disabled');
   foodList.classList.remove('active');
-  toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = 'none';
+  foodImage.classList.add('active');
+  toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = 'none'; // TODO add class to icon instead to morph
   toggleFoodList.getElementsByClassName('mgIcon')[0].style.display = 'unset';
 }
 
-// Food item click handler setup.
-for (let i = 0; i < foodListItems.children.length; i++) {
-  foodListItems.children[i].addEventListener('click', (e) => {
-    if (foodList.dataset.active === 'true' && !e.currentTarget.classList.contains('selected')) {
-      if (previousItem === undefined) { // This only will happen the first time an item is selected.
-        currentItem = e.currentTarget;
-        currentItem.classList.add('selected');
-      } else {
-        currentItem = e.currentTarget;
-        currentItem.classList.add('selected');
-        previousItem.classList.remove('selected');
-      }
-      updateValues(currentItem);
-      closeFoodList();
-    }
-  });
+/**
+ * Opens the food list.
+ */
+function openFoodList() {
+  foodList.dataset.active = 'true';
+  foodList.classList.remove('disabled');
+  foodList.classList.add('active');
+  foodImage.classList.remove('transition');
+  foodImage.classList.remove('active');
+  toggleFoodList.getElementsByClassName('mgIcon')[0].style.display = 'none'; // TODO add class to icon instead to morph
+  toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = 'unset';
 }
 
-// Food list toggle click handler setup.
-toggleFoodList.addEventListener('click', () => {
-  if (foodList.dataset.active === 'false') {
-    if (currentItem) previousItem = currentItem;
-    foodList.dataset.active = 'true';
-    foodList.classList.remove('disabled');
-    foodList.classList.add('active');
-    toggleFoodList.getElementsByClassName('mgIcon')[0].style.display = 'none';
-    toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = 'unset';
-  } else {
+/**
+ * If the item is not already seleceted it selects it, closes the food list and updates the UI values.
+ * @param {HTMLImageElement} item A food item in the list.
+ */
+function selectFoodItem(item) {
+  if (!item.classList.contains('selected')) {
+    if (currentItem) currentItem.classList.remove('selected');
+    currentItem = item;
+    currentItem.classList.add('selected');
+    foodImage.href.baseVal = currentItem.src;
+    foodImage.classList.add('transition');
     closeFoodList();
+    updateValues(currentItem);
   }
+}
+
+// Food items click handler.
+for (let i = 0; i < foodListItems.children.length; i++) {
+  foodListItems.children[i].addEventListener('click', e => selectFoodItem(e.currentTarget));
+}
+
+// Food list toggle handler.
+toggleFoodList.addEventListener('click', () => {
+  if (foodList.dataset.active === 'false')
+    openFoodList();
+  else
+    closeFoodList();
 });
 
 

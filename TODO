@@ -6,14 +6,18 @@
 
 ☐ Make that clicking on the food title also opens the food list.
 
-☐ Rename the #valoresNutricionales id
-
 ☐ Make the magnifying glass morph to cross.
 
 ☐ Github icon on the lower corner.
 
-☐ Set vertical mediaquery also for the root font-size.
+☐ Close the list with ESC key.
+
+☐ Make food list equivalent to the active or disabled style so only one class is needed.
+
+☐ Make SVG UI responsive, so for example if the smatphone is landscape it has the circe in the middle and two columns on each side or the circle in one side and the columns on the other.
 
 
 Archive:
   ✔ Reorganize automatic illustrator classes on UI svg @done(20-04-16 23:23)
+  ✔ Rename the #valoresNutricionales id. @done(20-04-28 22:33)
+  ✔ Set vertical mediaquery also for the root font-size. @done(20-04-28 22:52)
