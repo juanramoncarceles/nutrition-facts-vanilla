@@ -1,5 +1,6 @@
 node_modules
 .cache-loader
+.cache
 .DS_Store
 Thumbs.db
 Desktop.ini
