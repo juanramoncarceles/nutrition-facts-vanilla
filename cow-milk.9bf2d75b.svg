@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 97 87">
+  <defs>
+    <linearGradient id="milkGradient1" x1="40.68" y1="12.57" x2="43.67" y2="22.96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#787878" />
+      <stop offset="0.23" stop-color="#8a8a8a" />
+      <stop offset="0.68" stop-color="#bababa" />
+      <stop offset="0.69" stop-color="#bababa" />
+    </linearGradient>
+    <linearGradient id="milkGradient2" x1="62.99" y1="62.25" x2="95.87" y2="62.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#bababa" />
+      <stop offset="0.01" stop-color="#c4c4c4" />
+      <stop offset="0.05" stop-color="#dadada" />
+      <stop offset="0.09" stop-color="#ebebeb" />
+      <stop offset="0.14" stop-color="#f6f6f6" />
+      <stop offset="0.2" stop-color="#fdfdfd" />
+      <stop offset="0.4" stop-color="#fff" />
+      <stop offset="0.5" stop-color="#f7f7f7" />
+      <stop offset="0.65" stop-color="#e2e2e2" />
+      <stop offset="0.84" stop-color="silver" />
+      <stop offset="0.87" stop-color="#bababa" />
+    </linearGradient>
+  </defs>
+  <g>
+    <polygon points="52.4 70.48 52.4 78.86 34.18 86.44 34.18 77.51 52.4 70.48" style="fill: #bababa;stroke: #000;stroke-linejoin: round" />
+    <polygon points="34.18 77.53 34.18 86.44 0.5 83.53 0.5 74.88 34.18 77.53" style="fill: #fff;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="52.4 29.84 52.4 33.37 34.2 40.39 34.18 40.39 34.18 36.88 52.4 29.84" style="fill: #bababa;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="34.18 36.88 34.18 40.39 0.5 37.58 0.5 34.22 34.18 36.88" style="fill: #fff;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="52.4 18.87 52.4 26.79 34.18 33.82 34.18 24.43 52.4 18.87" style="fill: #bababa;stroke: #000;stroke-linejoin: round" />
+    <polygon points="34.18 24.43 34.18 33.82 0.5 31.16 0.5 21.78 11.06 8.15 11.06 0.5 43.98 1.88 43.98 9.23 34.18 24.43" style="fill: #fff;stroke: #000;stroke-linejoin: round" />
+    <line x1="11.06" y1="8.15" x2="43.98" y2="9.23" style="fill: none;stroke: #000;stroke-miterlimit: 10" />
+    <line x1="0.5" y1="21.78" x2="34.18" y2="24.43" style="fill: none;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="34.18 40.39 34.18 71.19 0.5 68.53 0.5 37.58 34.18 40.39" style="fill: #5a87ff;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="52.4 33.37 52.4 64.22 34.18 71.25 34.18 40.39 34.2 40.39 52.4 33.37" style="fill: #3e5eb0;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="34.18 74.54 34.18 77.53 0.5 74.88 0.5 71.88 34.18 74.54" style="fill: #5a87ff;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="52.4 67.62 52.4 70.48 34.18 77.51 34.18 74.65 52.4 67.62" style="fill: #3e5eb0;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="52.4 64.22 52.4 67.62 34.18 74.65 34.18 71.25 52.4 64.22" style="fill: #bababa;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="34.18 71.19 34.18 74.54 0.5 71.88 0.5 68.53 34.18 71.19" style="fill: #fff;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="52.4 18.87 41.66 12.83 43.98 9.23 52.4 18.87" style="fill: #969696;stroke: #000;stroke-linejoin: round" />
+    <polygon points="52.4 18.87 34.18 24.43 41.66 12.83 52.4 18.87" style="stroke: #000;stroke-linejoin: round;fill: url(#milkGradient1)" />
+    <polygon points="52.4 26.79 52.4 29.84 34.18 36.88 34.18 33.82 52.4 26.79" style="fill: #3e5eb0;stroke: #000;stroke-miterlimit: 10" />
+    <polygon points="34.18 33.82 34.18 36.88 0.5 34.22 0.5 31.16 34.18 33.82" style="fill: #5a87ff;stroke: #000;stroke-miterlimit: 10" />
+    <g>
+      <path d="M26,52.63a29.64,29.64,0,0,1-.9,6.65c-.35,1.61-1.76,4.68-3,5.63s-2.24,1-3.85.8a8.64,8.64,0,0,1-2.1-.4,5.67,5.67,0,0,1-1.91-1.19,20.05,20.05,0,0,1-3.8-6.32,37.67,37.67,0,0,1-1.86-7c0-.22,0-.44-.06-.65A5.28,5.28,0,0,1,10,46.06c.17-.18.33-.35.5-.51l.51-.43a4.67,4.67,0,0,1,1.44-.81,10.32,10.32,0,0,1,4.31-.24h0a11.8,11.8,0,0,1,4.4,1.14,7,7,0,0,1,1.57,1.11l.58.55c.18.18.37.39.56.6l0,0a7.53,7.53,0,0,1,2.07,4.43A6.16,6.16,0,0,1,26,52.63Z" style="fill: #fff;stroke: #000;stroke-miterlimit: 10" />
+      <path d="M25.94,51.91a23.17,23.17,0,0,1-.56,5.89,2.36,2.36,0,0,0-.71-1.22c-.62-.6-1.55-.76-1.89-1.77a3.22,3.22,0,0,1,.94-3.11,4.44,4.44,0,0,0,1.34-2.61A6.42,6.42,0,0,1,25.94,51.91Z" />
+      <path d="M11.62,54.3c-.38.89-1.38,2.63-1.45,2.73a35.9,35.9,0,0,1-1.53-5.77c.77.11.73,0,1,.59s0,.64.86,1S12,53.38,11.62,54.3Z" />
+      <path d="M15.87,48.23c-.53.17-2.12-.6-3.2-.59s-1.23.66-2.11.8a4.11,4.11,0,0,1-1.89,0A6.31,6.31,0,0,1,11,45.13,5.37,5.37,0,0,1,14.67,44,5.93,5.93,0,0,1,16,46.55C16.11,47.35,16.39,48.05,15.87,48.23Z" />
+      <path d="M12.44,44.32a4.67,4.67,0,0,0-1.44.81l-.51.43a10,10,0,0,1-1.25-2A7.6,7.6,0,0,1,8.9,41c0-.35.22-.63.75-.51s.88,1.52,1.19,1.95A12,12,0,0,0,12.44,44.32Z" style="fill: #946230;stroke: #000;stroke-miterlimit: 10" />
+      <path d="M24.29,45.13a6.1,6.1,0,0,1-1,1.75l-.58-.55a7,7,0,0,0-1.57-1.11,7.85,7.85,0,0,0,1.34-1.58c.27-.38.42-1.72.95-1.74a.79.79,0,0,1,.84.67A7.13,7.13,0,0,1,24.29,45.13Z" style="fill: #946230;stroke: #000;stroke-miterlimit: 10" />
+      <path d="M8.51,50.13c0,.21,0,.43.06.65a10.11,10.11,0,0,1-1,.09,9.92,9.92,0,0,1-2.43-.45,3.49,3.49,0,0,1-1.86-1c-.22-.33,0-.64.58-1.32a9,9,0,0,1,2.62-2.22,6.53,6.53,0,0,1,3.56.14A5.28,5.28,0,0,0,8.51,50.13Z" style="fill: #fff;stroke: #000;stroke-miterlimit: 10" />
+      <path d="M31.21,52.34a2.48,2.48,0,0,1-1.75.59A9,9,0,0,1,27,52.87L26,52.63a6.16,6.16,0,0,0,0-.72,7.53,7.53,0,0,0-2.07-4.43l0,0a7.08,7.08,0,0,1,3.61.62,14.83,14.83,0,0,1,3,2.79C31.08,51.68,31.39,52,31.21,52.34Z" style="fill: #fff;stroke: #000;stroke-miterlimit: 10" />
+      <path d="M15.77,52.72c0,.63-.34,1.1-.85,1a1.3,1.3,0,0,1-1-1.23c0-.63.34-1.1.85-1A1.3,1.3,0,0,1,15.77,52.72Z" />
+      <path d="M18.94,53a1.3,1.3,0,0,0,1,1.23c.52.05.9-.41.85-1a1.3,1.3,0,0,0-1-1.23C19.28,51.94,18.89,52.41,18.94,53Z" />
+      <path d="M17.56,55.86a12.65,12.65,0,0,1,5.2,1.44c1.13.64,3,2,3.13,4s-1.54,3.12-7.79,2.48h0c-6.25-.64-8.11-2.15-8.24-4.12s1.57-3,2.62-3.39a10.5,10.5,0,0,1,5.08-.38" style="fill: #ffcbad;stroke: #000;stroke-miterlimit: 10" />
+      <path d="M16.5,60.32a.56.56,0,0,1-.65.61.85.85,0,0,1-.75-.76.56.56,0,0,1,.65-.61A.85.85,0,0,1,16.5,60.32Z" />
+      <path d="M19.26,60.6a.85.85,0,0,0,.75.76.56.56,0,0,0,.65-.61.85.85,0,0,0-.75-.76A.56.56,0,0,0,19.26,60.6Z" />
+    </g>
+    <path d="M95.87,42.74,94.55,78.46c-.06,1.74-6.71,3.3-15.06,3.3s-15.12-1.56-15.18-3.3L63,42.74c0,2.06,7.11,3.73,16.14,3.73S95.83,44.79,95.87,42.74Z" style="stroke: #000;stroke-miterlimit: 10;fill: url(#milkGradient2)" />
+    <path d="M96.5,25.8l-.62,16.91c0-2.08-7.7-3.75-16.75-3.75S63,40.63,63,42.71L62.36,25.8c0-2.16,7.64-3.9,17.07-3.9S96.5,23.64,96.5,25.8Z" style="fill: #fff;fill-opacity: 0.25;stroke: #000;stroke-miterlimit: 10" />
+    <path d="M96.5,25.8c0,2.16-7.64,3.9-17.07,3.9S62.36,28,62.36,25.8" style="fill: none;stroke: #000;stroke-miterlimit: 10" />
+    <path d="M95.87,42.71h0v0c0,2.06-7.72,3.73-16.75,3.73S63,44.79,63,42.74v0h0C63,40.63,70.08,39,79.13,39S95.85,40.63,95.87,42.71Z" style="fill: #fff;stroke: #000;stroke-miterlimit: 10" />
+  </g>
+</svg>
