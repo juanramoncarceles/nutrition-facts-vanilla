@@ -85,8 +85,7 @@ function closeFoodList() {
   foodList.classList.add('disabled');
   foodList.classList.remove('active');
   foodImage.classList.add('active');
-  toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = 'none'; // TODO add class to icon instead to morph
-  toggleFoodList.getElementsByClassName('mgIcon')[0].style.display = 'unset';
+  toggleFoodList.classList.remove('active');
 }
 
 /**
@@ -96,10 +95,8 @@ function openFoodList() {
   foodList.dataset.active = 'true';
   foodList.classList.remove('disabled');
   foodList.classList.add('active');
-  foodImage.classList.remove('transition');
-  foodImage.classList.remove('active');
-  toggleFoodList.getElementsByClassName('mgIcon')[0].style.display = 'none'; // TODO add class to icon instead to morph
-  toggleFoodList.getElementsByClassName('crossIcon')[0].style.display = 'unset';
+  foodImage.classList.remove('transition', 'active');
+  toggleFoodList.classList.add('active');
 }
 
 /**

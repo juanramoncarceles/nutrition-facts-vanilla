@@ -93,8 +93,26 @@ body {
   cursor: pointer;
 }
 
-#toggleFoodList > svg {
-  fill: #fff;
+#toggleFoodList > svg > * {
+  transition: stroke-dasharray 1s;
+}
+#toggleFoodList > svg > .glass {
+  stroke-dasharray: 16 16;
+}
+#toggleFoodList.active > svg > .glass {
+  stroke-dasharray: 0 16;
+}
+#toggleFoodList > svg > .handle {
+  stroke-dasharray: 7.7 14;
+}
+#toggleFoodList.active > svg > .handle {
+  stroke-dasharray: 20 14;
+}
+#toggleFoodList > svg > .cross {
+  stroke-dasharray: 0 14;
+}
+#toggleFoodList.active > svg > .cross {
+  stroke-dasharray: 12 14;
 }
 
 #foodList {
