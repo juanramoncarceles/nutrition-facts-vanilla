@@ -197,6 +197,14 @@ body {
   color: #999;
 }
 
+.github-link {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
 @media (max-width: 400px), (max-height: 400px) {
   :root {
     font-size: 0.8rem;

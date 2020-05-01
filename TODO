@@ -1,14 +1,6 @@
-☐ Make responsive for small screens like phones. Is to high so it should adapt to window height. (Take into account when orientation is landscape on a phone).
-  ▫ On the new structure:
-    - The food title and the main svg should be inside a container and it centered vertically.
-    - The problem is that the choosed item wouldnt match vertically, so it would be better to think of another option (svg symbols? img scr with the same?, move the element?)
-    - The footer without the added margin top, because it would be pushed to the bottom as the last flex item of the column.
-
-☐ Make that clicking on the food title also opens the food list.
-
 ☐ Make the magnifying glass morph to cross.
 
-☐ Github icon on the lower corner.
+☐ Make that clicking on the food title also opens the food list.
 
 ☐ Close the list with ESC key.
 
@@ -18,6 +10,8 @@
 
 
 Archive:
-  ✔ Reorganize automatic illustrator classes on UI svg @done(20-04-16 23:23)
-  ✔ Rename the #valoresNutricionales id. @done(20-04-28 22:33)
-  ✔ Set vertical mediaquery also for the root font-size. @done(20-04-28 22:52)
+✔ Reorganize automatic illustrator classes on UI svg @done(20-04-16 23:23)
+✔ Rename the #valoresNutricionales id. @done(20-04-28 22:33)
+✔ Set vertical mediaquery also for the root font-size. @done(20-04-28 22:52)
+✔ Make responsive for small screens like phones. It should adapt to window height. @done(20-05-01 17:35)
+✔ Github icon on the lower corner. @done(20-05-01 17:39)
