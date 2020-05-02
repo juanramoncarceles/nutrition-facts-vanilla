@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel index.html",
     "prebuild": "rm -rf dist",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html && cp CNAME dist/CNAME",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
