@@ -1,12 +1,14 @@
 Features:
+  ☐ Add clear input button, like a small cross on the right side.
   ☐ Make that clicking on the food title also opens the food list.
   ☐ Close the list with ESC key.
   ☐ Make SVG UI responsive, so for example if the smatphone is landscape it has the circe in the middle and two columns on each side or the circle in one side and the columns on the other.
   ☐ After searching, if a food item doesn't exist set a sentence or image saying that this item is not available.
-  ☐ Add clear input button, like a small cross on the right side.
+  ☐ Connect a food REST API or easier/cheaper use a the Google Spreadsheet API and set the data there.
 
 Changes:
-  ☐ Make food list equivalent to the active or disabled style so only one class is needed.
+  ☐ GiHub link must be hidden or below when the list of items is active on small screens beacuse there is not enough space. @high 
+  ☐ Make food list equivalent to the active or disabled style so only one class is needed. @low 
 
 
 Archive:

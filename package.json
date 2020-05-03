@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
+    "lint": "eslint src --ext .js && echo \"\\033[0;32m\\033[1mLinting was successful!\"",
     "prebuild": "rm -rf dist",
     "build": "parcel build index.html && cp CNAME dist/CNAME",
     "deploy": "git subtree push --prefix dist origin gh-pages"
