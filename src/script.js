@@ -69,13 +69,49 @@ function updateValues(foodItem) {
 
 
 ///////////////////////////////////////////////////////////////////////////////
+////////////////////////// FILTER FOOD FORM ///////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+// DOM elements reference.
+const foodListInput = document.getElementById('foodListInput');
+const foodListItems = document.getElementById('foodListItems');
+
+/**
+ * Hiddes all the foodListItems children that doesn't include the keyword on
+ * the data-name.
+ * @param {string} keyword 
+ */
+function filterFood(keyword) {
+  const string = keyword.toLowerCase();
+  for (let i = 0; i < foodListItems.children.length; i++) {
+    if (!foodListItems.children[i].dataset.name.toLowerCase().includes(string)) {
+      foodListItems.children[i].style.display = 'none';
+    } else {
+      foodListItems.children[i].style.display = 'unset';
+    }
+  }
+}
+
+foodListInput.addEventListener('input', (e) => {
+  filterFood(e.target.value);
+});
+
+/**
+ * Clears the filter input.
+ */
+function clearFilter() {
+  foodListInput.value = '';
+  foodListInput.dispatchEvent(new Event('input'));
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// THE FOOD LIST ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
 // DOM elements reference.
 const toggleFoodList = document.getElementById('toggleFoodList');
 const foodList = document.getElementById('foodList');
-const foodListItems = document.getElementById('foodListItems');
 
 /**
  * Closes the food list.
@@ -86,6 +122,7 @@ function closeFoodList() {
   foodList.classList.remove('active');
   foodImage.classList.add('active');
   toggleFoodList.classList.remove('active');
+  clearFilter();
 }
 
 /**
@@ -126,34 +163,6 @@ toggleFoodList.addEventListener('click', () => {
     openFoodList();
   else
     closeFoodList();
-});
-
-
-///////////////////////////////////////////////////////////////////////////////
-////////////////////////// FILTER FOOD FORM ///////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-
-// DOM elements reference.
-const foodListInput = document.getElementById('foodListInput');
-
-/**
- * Hiddes all the foodListItems children that doesn't include the keyword on
- * the data-name.
- * @param {string} keyword 
- */
-function filterFood(keyword) {
-  const string = keyword.toLowerCase();
-  for (let i = 0; i < foodListItems.children.length; i++) {
-    if (!foodListItems.children[i].dataset.name.toLowerCase().includes(string)) {
-      foodListItems.children[i].style.display = 'none';
-    } else {
-      foodListItems.children[i].style.display = 'unset';
-    }
-  }
-}
-
-foodListInput.addEventListener('input', (e) => {
-  filterFood(e.target.value);
 });
 
 
